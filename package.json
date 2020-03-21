@@ -5,10 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test": "npm run test:unit",
+    "lint": "eslint \"src/**/*.{vue,js}\"",
+    "dev": "npm run serve",
+    "prepublishOnly": "npm run build",
+    "start": "npm run serve",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "watch": "npm run build -- --mode production --watch"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5"
